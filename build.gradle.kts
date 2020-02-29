@@ -9,6 +9,7 @@ allprojects {
     version = "1.0-SNAPSHOT"
 
     apply(plugin = "java")
+    apply(plugin = "maven")
     apply(plugin = "kotlin")
 
     repositories {
