@@ -1,7 +1,6 @@
-import java.net.URL
-
 plugins {
     java
+    maven
     kotlin("jvm") version "1.3.61"
 }
 
@@ -21,7 +20,6 @@ allprojects {
 
     dependencies {
         compileOnly(kotlin("stdlib-jdk8"))
-        compileOnly(kotlin("reflect"))
         compileOnly("org.jetbrains.kotlinx", "kotlinx-coroutines-core", "1.3.3")
         compileOnly("org.jetbrains.kotlinx", "kotlinx-io-jvm", "0.1.16")
         compileOnly("com.github.xjcyan1de", "CyanLibZ", "1.4.12")
