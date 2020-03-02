@@ -21,7 +21,7 @@ class WorldSaver(
 
     fun save(output: Output) = output.apply {
         val sortedChunks =
-            editedChunks.map { it.chunkSnapshot }.sortedBy { it.z.toLong() * Integer.MAX_VALUE + it.x.toLong() }
+            editedChunks.map { it.chunkSnapshot }.sortedBy { it.x.toLong() * Integer.MAX_VALUE + it.z.toLong() }
         val minX = sortedChunks.map { it.x }.toIntArray().min() ?: 0
         val minZ = sortedChunks.map { it.z }.toIntArray().min() ?: 0
         val maxX = sortedChunks.map { it.x }.toIntArray().max() ?: 0

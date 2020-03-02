@@ -14,7 +14,7 @@ class TinyWorldGenerator(
 ) : ChunkGenerator() {
     override fun generateChunkData(world: World, random: Random, x: Int, z: Int, biomeGrid: BiomeGrid): ChunkData {
         val chunkData = createChunkData(world)
-        val chunkKey = z.toLong() * Integer.MAX_VALUE + x.toLong()
+        val chunkKey = x.toLong() * Integer.MAX_VALUE + z.toLong()
         val chunk = chunks[chunkKey]
         if (chunk != null) {
             chunk.forEachIndexed { index, chunkSectionData ->
